@@ -6,3 +6,11 @@
   width: 1920px;
   height: 1080px;
 }
+
+.game-window {
+  position: absolute;
+  width: calc(100% / 4 * 3);
+  z-index: 10;
+  top: 50px;
+  left: 50px;
+}
