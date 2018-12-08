@@ -1,0 +1,8 @@
+@import 'tailwind.css';
+
+.application {
+  position: relative;
+  background: red;
+  width: 1920px;
+  height: 1080px;
+}

@@ -1,10 +1,19 @@
 'use strict';
+require('dotenv').config();
 
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'extra-life-overlay',
     environment,
     rootURL: '/',
+    firebase: {
+      apiKey: process.env.API_KEY,
+      authDomain: "extra-life-253a4.firebaseapp.com",
+      databaseURL: "https://extra-life-253a4.firebaseio.com",
+      projectId: "extra-life-253a4",
+      storageBucket: "extra-life-253a4.appspot.com",
+      messagingSenderId: "147987839613",
+    },
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
