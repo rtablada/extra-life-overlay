@@ -1,7 +1,57 @@
 <div class="game-window">
-  <ContentWindow @ratio="16,9" class="bg-teal-dark" />
+  <ContentWindow @ratio="16,9" class="bg-teal-dark border-grey-light border" />
 </div>
 
 <div class="camera-window">
-  <ContentWindow @ratio="16,9" class="bg-pink" />
+  <ContentWindow @ratio="16,9" class="bg-pink border-grey-light border" />
+</div>
+
+<div class="channel-info flex justify-between">
+  <div>
+    <h2 class="text-5xl text-teal-lighter mb-2">bit.ly/extra-olw-18</h2>
+    <h2 class="text-5xl text-blue-light">@OneLastWord</h2>
+  </div>
+
+
+
+  <div class="flex-grow flex justify-end items-center">
+    <img src="/extra-life.svg" alt="" class="-mr-4">
+  </div>
+</div>
+
+<div class="extra-life-milestones flex">
+  <HasFunding as |funding| >
+    <GoalThermometer
+      @nextGoal={{funding.nextGoal}}
+      @value={{funding.sumDonations}}
+      @nextGoalText={{funding.nextGoalText}}
+    />
+  </HasFunding>
+</div>
+
+<div class="goals">
+  <h2 class="text-3xl text-grey-lightest mb-2 mr-24 border-b border-teal-light">Goals</h2>
+  <ul class="flex -mt-2 flex-col flex-wrap list-reset text-grey-lightest font-bold text-2xl">
+    <HasFunding as |funding| >
+      {{#each funding.goals as |goal|}}
+        <li class="my-2">
+          <span class="{{if goal.complete 'strike'}}">
+            ${{goal.value}} <span class="text-grey">{{goal.text}}</span>
+          </span>
+        </li>
+      {{/each}}
+    </HasFunding>
+  </ul>
+</div>
+
+<div class="rewards">
+  <h2 class="text-3xl text-grey-lightest mb-2 mr-24 border-b border-teal-light">Rewards</h2>
+  <ul class="flex -mt-2 flex-col flex-wrap list-reset text-grey-lightest font-bold text-2xl">
+    <li class="my-2">$2 <span class="text-grey">Dog Cam</span></li>
+    <li class="my-2">$5 <span class="text-grey">Beanboozled</span></li>
+    <li class="my-2">$10 <span class="text-grey">La Croix</span></li>
+    <li class="my-2">$20 <span class="text-grey">20 Pushups</span></li>
+    <li class="my-2">$50 <span class="text-grey">Pick a Game (30min)</span></li>
+    <li class="my-2">$100 <span class="text-grey">Pick a Game (1hr)</span></li>
+  </ul>
 </div>

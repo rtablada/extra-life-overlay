@@ -7,6 +7,8 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('camera-only');
+  this.route('game-only');
 });
 
 export default Router;

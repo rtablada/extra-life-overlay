@@ -15,7 +15,8 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "deploy": "ember build -e production && cp dist/index.html dist/200.html && surge dist ryan-extralife-overlay.surge.sh"
   },
   "devDependencies": {
     "@ember/jquery": "^0.5.2",

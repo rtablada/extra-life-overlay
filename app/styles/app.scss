@@ -2,7 +2,6 @@
 
 .application {
   position: relative;
-  background: red;
   width: 1920px;
   height: 1080px;
 }
@@ -11,16 +10,56 @@
   position: absolute;
   width: calc(100% / 4 * 3);
   z-index: 10;
-  top: 50px;
-  left: 50px;
+  top: 30px;
+  left: 30px;
 }
 
 .camera-window {
   position: absolute;
   width: calc(100% / 3 * 1);
   z-index: 10;
-  bottom: 50px;
-  right: 50px;
+  bottom: 30px;
+  right: 30px;
+}
+
+.channel-info {
+  position: absolute;
+  width: 1220px;
+  bottom: 30px;
+  left: 30px;
+}
+
+.extra-life-milestones {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 50%;
+}
+
+.goals {
+  position: absolute;
+  top: 60px;
+  left: 1480px;
+}
+
+.rewards {
+  position: absolute;
+  top: 384px;
+  left: 1480px;
+}
+
+.strike {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    width: calc(100% + 1rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    border-bottom: 0.3rem solid #cc1f1a;
+  }
 }
 
 @import "pod-styles";
