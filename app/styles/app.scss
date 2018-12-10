@@ -27,6 +27,10 @@
   width: 1220px;
   bottom: 30px;
   left: 30px;
+
+  &.full-width {
+    width: calc(100% - 50px);
+  }
 }
 
 .extra-life-milestones {
